@@ -1,0 +1,42 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<title>Customer Information</title>
+		<style>
+		body{
+		background-color:darkgreen;
+			}
+		h1{
+		color:gold;
+		font-size:200%;
+		  }
+		p {
+		color:gold;
+		font-size:120%;
+		  }
+		</style>
+</head>
+
+<body>
+	<h1 align="center">Customer Information</h1>
+	
+	<script>
+		function validateForm() 
+		{
+		var x = document.forms["myForm"]["fname"].value;
+		if (x == "") 
+			{
+			alert("Please complete all the information!");
+			return false;
+			}
+		}
+	</script>
+	
+<form name="myForm" onsubmit="return validateForm()" method="post">
+ <p align="center">First Name: <input type="text" name="fname">
+ <p align="center">Last Name:<input type="text" name="fname">
+ <p align="center">E-mail:<input type="text" name="fname">
+ <p align="center"> <input type="submit" value="Submit">
+</form>
+</body>
+</html>
