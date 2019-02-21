@@ -23,19 +23,30 @@
 	<script>
 		function validateForm() 
 		{
-		var x = document.forms["myForm"]["fname"].value;
-		if (x == "") 
+			var x = document.forms["myForm"]["fname"].value;
+			var y=document.forms["myForm"]["lname"].value;
+			var z=document.forms["myForm"]["email"].value;
+			if (x == "") 
 			{
-			alert("Please complete all the information!");
-			return false;
+			alert("Please enter your first name!");
 			}
+			if(y=="")
+			{
+			alert("Please enter your last name!");
+			}
+			if(z=="")
+			{
+			alert("Please enter your email address!");
+			}
+			return false;
 		}
+
 	</script>
 	
 <form name="myForm" onsubmit="return validateForm()" method="post">
  <p align="center">First Name: <input type="text" name="fname">
- <p align="center">Last Name:<input type="text" name="fname">
- <p align="center">E-mail:<input type="text" name="fname">
+ <p align="center">Last Name:<input type="text" name="lname">
+ <p align="center">E-mail:<input type="text" name="email">
  <p align="center"> <input type="submit" value="Submit">
 </form>
 </body>
